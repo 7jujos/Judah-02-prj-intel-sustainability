@@ -1,0 +1,25 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#edf4ff"/>
+      <stop offset="100%" stop-color="#c9dcff"/>
+    </linearGradient>
+    <linearGradient id="zero7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#274d91"/>
+      <stop offset="100%" stop-color="#5f8acf"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="34" fill="url(#bg7)"/>
+  <rect x="120" y="100" width="560" height="250" rx="32" fill="#f7fbff"/>
+  <circle cx="400" cy="225" r="110" fill="url(#zero7)" opacity="0.95"/>
+  <path d="M300 225 H500" stroke="#d7e6ff" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+  <path d="M400 125 V325" stroke="#d7e6ff" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+  <path d="M330 175 C345 140 375 135 400 160 C425 135 455 140 470 175" fill="none" stroke="#eef3ff" stroke-width="14" opacity="0.9"/>
+  <path d="M320 275 C330 295 370 310 400 300 C430 310 470 295 480 275" fill="none" stroke="#eef3ff" stroke-width="14" opacity="0.9"/>
+  <text x="400" y="210" font-family="Inter, Arial, sans-serif" font-size="30" fill="#ffffff" text-anchor="middle">Net Zero</text>
+  <text x="400" y="245" font-family="Inter, Arial, sans-serif" font-size="16" fill="#dce7ff" text-anchor="middle">Scope 1 &amp; 2 by 2040</text>
+  <rect x="220" y="160" width="70" height="70" rx="20" fill="#eef6ff" opacity="0.92"/>
+  <rect x="510" y="180" width="70" height="70" rx="20" fill="#eef6ff" opacity="0.92"/>
+  <path d="M245 190 L265 210 L295 180" stroke="#1d4e92" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M535 205 L555 185 L585 215" stroke="#1d4e92" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

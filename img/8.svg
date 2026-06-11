@@ -1,0 +1,25 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef7ff"/>
+      <stop offset="100%" stop-color="#c6dbff"/>
+    </linearGradient>
+    <linearGradient id="panel8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f5cab"/>
+      <stop offset="100%" stop-color="#64a0ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="34" fill="url(#bg8)"/>
+  <rect x="100" y="100" width="600" height="250" rx="32" fill="#f6faff"/>
+  <rect x="180" y="170" width="440" height="140" rx="28" fill="url(#panel8)"/>
+  <path d="M220 210 H580" stroke="#c8dcff" stroke-width="14"/>
+  <path d="M220 245 H580" stroke="#c8dcff" stroke-width="14"/>
+  <path d="M220 280 H580" stroke="#c8dcff" stroke-width="14"/>
+  <rect x="310" y="120" width="180" height="90" rx="24" fill="#eef7ff" opacity="0.96"/>
+  <text x="400" y="180" font-family="Inter, Arial, sans-serif" font-size="34" fill="#143d70" text-anchor="middle">99%</text>
+  <text x="400" y="215" font-family="Inter, Arial, sans-serif" font-size="16" fill="#274f80" text-anchor="middle">Renewable Electricity</text>
+  <path d="M230 330 C300 260 380 260 450 330" stroke="#7ea5e3" stroke-width="16" fill="none" opacity="0.85"/>
+  <path d="M490 330 C560 260 620 260 690 330" stroke="#7ea5e3" stroke-width="16" fill="none" opacity="0.85"/>
+  <circle cx="350" cy="230" r="18" fill="#ffffff"/>
+  <circle cx="450" cy="230" r="18" fill="#ffffff"/>
+</svg>

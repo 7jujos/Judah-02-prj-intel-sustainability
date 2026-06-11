@@ -15,16 +15,98 @@ body {
   color: #142437;
 }
 
+body.dark-mode {
+  background: linear-gradient(180deg, #121724 0%, #1a2437 100%);
+  color: #e7eff9;
+}
+
 img {
   max-width: 100%;
   display: block;
 }
 
 header {
-  padding: 2rem 1rem 1rem;
+  padding: 1rem;
 }
 
-header > div {
+header .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 700;
+  color: #0f3d7f;
+}
+
+body.dark-mode .brand {
+  color: #b8d3ff;
+}
+
+.brand img {
+  width: 42px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: #1d4f98;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+body.dark-mode nav a {
+  color: #d5e9ff;
+}
+
+#theme-toggle {
+  border: 1px solid rgba(20, 99, 184, 0.16);
+  background: #ffffff;
+  color: #1d4f98;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+body.dark-mode #theme-toggle {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+  color: #e7eff9;
+}
+
+body.dark-mode .nav-bar,
+body.dark-mode .brand,
+body.dark-mode nav a,
+body.dark-mode #theme-toggle,
+body.dark-mode .hero-card,
+body.dark-mode .timeline-card,
+body.dark-mode .date-pill,
+body.dark-mode h1,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode .timeline-card p {
+  color: #e7eff9;
+}
+
+body.dark-mode .card-copy {
+  background: linear-gradient(180deg, rgba(10, 20, 38, 0.16), rgba(8, 16, 30, 0.96));
+}
+
+.hero-card {
   max-width: 980px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.94);
@@ -34,9 +116,63 @@ header > div {
   text-align: center;
 }
 
-header img {
-  width: 110px;
-  margin-bottom: 1rem;
+body.dark-mode .hero-card {
+  background: rgba(17, 28, 42, 0.95);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.logo-brand,
+.logo-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  background: #0f3d7f;
+  padding: 0.18rem;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+}
+
+.logo-brand img,
+.logo-hero img {
+  display: block;
+  width: calc(100% - 6px);
+  max-width: 110px;
+}
+
+.logo-hero {
+  width: 96px;
+  padding: 0.26rem;
+  box-shadow: 0 16px 35px rgba(15, 35, 70, 0.14);
+}
+
+body.dark-mode .logo-brand,
+body.dark-mode .logo-hero {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode h1,
+body.dark-mode .hero-card p,
+body.dark-mode .timeline-card h3,
+body.dark-mode .timeline-card p,
+body.dark-mode p:last-of-type {
+  color: #e7eff9;
+}
+
+body.dark-mode .date-pill {
+  background: rgba(255, 255, 255, 0.08);
+  color: #c4ddff;
+}
+
+body.dark-mode .timeline-card {
+  border-color: rgba(110, 145, 210, 0.2);
+}
+
+body.dark-mode .hero-card p {
+  color: #cbd8ef;
+}
+
+body.dark-mode header img {
+  filter: brightness(0.95);
 }
 
 h1 {
@@ -55,21 +191,28 @@ header p {
 
 section {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   gap: 1.5rem;
   padding: 2rem 1rem 1.5rem;
   max-width: 1300px;
   margin: 0 auto;
+  overflow-x: auto;
 }
 
 section > div {
-  width: min(100%, 320px);
+  width: clamp(300px, calc((100% - 4.5rem) / 4), 380px);
+  flex: 0 0 auto;
   background: #ffffff;
   border-radius: 22px;
   overflow: hidden;
   box-shadow: 0 18px 40px rgba(15, 35, 70, 0.12);
   transition: transform 240ms ease, box-shadow 240ms ease;
+}
+
+body.dark-mode section > div {
+  background: rgba(18, 29, 43, 0.95);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
 }
 
 section > div:hover {
@@ -78,7 +221,7 @@ section > div:hover {
 }
 
 section > div img {
-  height: 180px;
+  height: 210px;
   width: 100%;
   object-fit: cover;
   filter: saturate(0.98) contrast(1.03);
@@ -86,7 +229,8 @@ section > div img {
 
 .timeline-card {
   position: relative;
-  width: min(100%, 320px);
+  width: 100%;
+  min-height: 520px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(239, 247, 255, 0.95) 100%);
   border: 1px solid rgba(20, 99, 184, 0.12);
   border-radius: 28px;
@@ -102,7 +246,27 @@ section > div img {
 }
 
 .card-copy {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.75rem;
   padding: 1.4rem 1.3rem 1.6rem;
+  background: transparent;
+  border-radius: 28px;
+  color: #ffffff;
+  pointer-events: none;
+  overflow: auto;
+  opacity: 1;
+  transform: translateY(0);
+  transition: background 260ms ease;
+  z-index: 1;
+}
+
+.timeline-card:hover .card-copy,
+.timeline-card:focus-within .card-copy {
+  background: rgba(15, 35, 70, 0.96);
 }
 
 .card-header {
@@ -119,8 +283,8 @@ section > div img {
   min-width: 60px;
   padding: 0.55rem 0.85rem;
   border-radius: 999px;
-  background: #eaf3ff;
-  color: #184a8b;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -131,26 +295,31 @@ section > div img {
   margin: 0;
   font-size: 1.2rem;
   line-height: 1.2;
-  color: #122637;
+  color: #ffffff;
 }
 
 .timeline-card p {
-  margin: 1rem 0 0;
+  margin: 0;
   line-height: 1.75;
-  color: #475b78;
+  color: #eef4ff;
   font-size: 0.95rem;
-  opacity: 0;
-  max-height: 0;
   overflow: hidden;
-  transition: opacity 240ms ease, max-height 240ms ease, transform 240ms ease;
-  transform: translateY(6px);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 260ms ease, transform 260ms ease;
 }
 
 .timeline-card:hover p,
 .timeline-card:focus-within p {
   opacity: 1;
-  max-height: 16rem;
   transform: translateY(0);
+}
+
+@media (hover: none) {
+  .timeline-card p {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .timeline-card::before {
@@ -167,18 +336,18 @@ section > div img {
   }
 
   section {
-    gap: 1rem;
+    display: block;
     padding-top: 1.5rem;
+    overflow: visible;
+  }
+
+  section > div {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   .timeline-card {
-    width: 100%;
-  }
-
-  .timeline-card p {
-    opacity: 1;
-    max-height: none;
-    transform: none;
+    min-height: auto;
   }
 }
 

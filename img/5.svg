@@ -1,0 +1,26 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eaf3ff"/>
+      <stop offset="100%" stop-color="#c9ddff"/>
+    </linearGradient>
+    <linearGradient id="panel5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f57a3"/>
+      <stop offset="100%" stop-color="#5d8dd6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="34" fill="url(#bg5)"/>
+  <rect x="90" y="90" width="620" height="270" rx="30" fill="#f6f9ff" opacity="0.96"/>
+  <path d="M150 280 C240 220 320 310 410 250 C500 190 580 330 660 270" fill="none" stroke="#5d8dd6" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <circle cx="150" cy="280" r="18" fill="#fff" stroke="#4a7fcf" stroke-width="12"/>
+  <circle cx="410" cy="250" r="18" fill="#fff" stroke="#4a7fcf" stroke-width="12"/>
+  <circle cx="660" cy="270" r="18" fill="#fff" stroke="#4a7fcf" stroke-width="12"/>
+  <rect x="250" y="120" width="300" height="200" rx="26" fill="url(#panel5)"/>
+  <rect x="292" y="160" width="216" height="110" rx="18" fill="#eef6ff" opacity="0.95"/>
+  <text x="400" y="220" font-family="Inter, Arial, sans-serif" font-size="36" fill="#143564" text-anchor="middle">2006</text>
+  <text x="400" y="255" font-family="Inter, Arial, sans-serif" font-size="18" fill="#1b3f71" text-anchor="middle">Peak GHG Emissions</text>
+  <path d="M260 330 H540" stroke="#8faee0" stroke-width="14" stroke-linecap="round" opacity="0.8"/>
+  <path d="M300 320 V350" stroke="#8faee0" stroke-width="14" stroke-linecap="round" opacity="0.8"/>
+  <path d="M380 305 V350" stroke="#8faee0" stroke-width="14" stroke-linecap="round" opacity="0.8"/>
+  <path d="M460 295 V350" stroke="#8faee0" stroke-width="14" stroke-linecap="round" opacity="0.8"/>
+</svg>
