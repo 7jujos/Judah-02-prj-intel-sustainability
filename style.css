@@ -1,1 +1,207 @@
-/* Add your CSS here */
+:root {
+  color-scheme: light;
+  font-family: Inter, Arial, sans-serif;
+  background: #eef5fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f4f8ff 0%, #e6effd 100%);
+  color: #142437;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  padding: 2rem 1rem 1rem;
+}
+
+header > div {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 18px 40px rgba(17, 44, 74, 0.12);
+  text-align: center;
+}
+
+header img {
+  width: 110px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 4vw, 3.4rem);
+  line-height: 1.05;
+}
+
+header p {
+  margin: 0 auto;
+  max-width: 760px;
+  line-height: 1.8;
+  color: #2f455f;
+  font-size: 1rem;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+section > div {
+  width: min(100%, 320px);
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(15, 35, 70, 0.12);
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+
+section > div:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 28px 55px rgba(15, 35, 70, 0.22);
+}
+
+section > div img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  filter: saturate(0.98) contrast(1.03);
+}
+
+.timeline-card {
+  position: relative;
+  width: min(100%, 320px);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(239, 247, 255, 0.95) 100%);
+  border: 1px solid rgba(20, 99, 184, 0.12);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(15, 35, 70, 0.12);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(20, 99, 184, 0.22);
+  box-shadow: 0 30px 70px rgba(15, 35, 70, 0.22);
+}
+
+.card-copy {
+  padding: 1.4rem 1.3rem 1.6rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.date-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: #eaf3ff;
+  color: #184a8b;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timeline-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #122637;
+}
+
+.timeline-card p {
+  margin: 1rem 0 0;
+  line-height: 1.75;
+  color: #475b78;
+  font-size: 0.95rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 240ms ease, max-height 240ms ease, transform 240ms ease;
+  transform: translateY(6px);
+}
+
+.timeline-card:hover p,
+.timeline-card:focus-within p {
+  opacity: 1;
+  max-height: 16rem;
+  transform: translateY(0);
+}
+
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(32, 69, 125, 0.03));
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  header > div {
+    padding: 1.6rem;
+  }
+
+  section {
+    gap: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  .timeline-card {
+    width: 100%;
+  }
+
+  .timeline-card p {
+    opacity: 1;
+    max-height: none;
+    transform: none;
+  }
+}
+
+p:last-of-type {
+  text-align: center;
+  margin: 0;
+  padding: 1.5rem 1rem 2rem;
+  color: #304064;
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  header > div {
+    padding: 1.6rem;
+  }
+
+  section {
+    gap: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  section > div {
+    width: 100%;
+  }
+}
+
